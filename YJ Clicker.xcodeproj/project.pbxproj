@@ -12,6 +12,8 @@
 		65581B0B20FA11C1000DC74F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65581B0920FA11C1000DC74F /* Main.storyboard */; };
 		65581B0D20FA11C4000DC74F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65581B0C20FA11C4000DC74F /* Assets.xcassets */; };
 		65581B1020FA11C4000DC74F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65581B0E20FA11C4000DC74F /* LaunchScreen.storyboard */; };
+		65581B1820FA22A6000DC74F /* GetHackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65581B1720FA22A6000DC74F /* GetHackingViewController.swift */; };
+		65581B1A20FA2B29000DC74F /* GROBOLD.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 65581B1920FA2B29000DC74F /* GROBOLD.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		65581B0C20FA11C4000DC74F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65581B0F20FA11C4000DC74F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		65581B1120FA11C4000DC74F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65581B1720FA22A6000DC74F /* GetHackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHackingViewController.swift; sourceTree = "<group>"; };
+		65581B1920FA2B29000DC74F /* GROBOLD.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = GROBOLD.ttf; path = ../../../Downloads/GROBOLD.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,8 @@
 				65581B0520FA11C1000DC74F /* AppDelegate.swift */,
 				65581B0720FA11C1000DC74F /* ViewController.swift */,
 				65581B0920FA11C1000DC74F /* Main.storyboard */,
+				65581B1920FA2B29000DC74F /* GROBOLD.ttf */,
+				65581B1720FA22A6000DC74F /* GetHackingViewController.swift */,
 				65581B0C20FA11C4000DC74F /* Assets.xcassets */,
 				65581B0E20FA11C4000DC74F /* LaunchScreen.storyboard */,
 				65581B1120FA11C4000DC74F /* Info.plist */,
@@ -122,6 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65581B1A20FA2B29000DC74F /* GROBOLD.ttf in Resources */,
 				65581B1020FA11C4000DC74F /* LaunchScreen.storyboard in Resources */,
 				65581B0D20FA11C4000DC74F /* Assets.xcassets in Resources */,
 				65581B0B20FA11C1000DC74F /* Main.storyboard in Resources */,
@@ -136,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				65581B0820FA11C1000DC74F /* ViewController.swift in Sources */,
+				65581B1820FA22A6000DC74F /* GetHackingViewController.swift in Sources */,
 				65581B0620FA11C1000DC74F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
