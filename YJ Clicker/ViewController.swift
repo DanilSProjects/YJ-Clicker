@@ -28,6 +28,15 @@ class ViewController: UIViewController {
     @IBAction func buttonPressed(_ sender: Any) {
         counter = counter + clickPower
         noOfTapsLabel.text = "Number of taps: \(counter)"
+        UIView.animate(withDuration: 0.1, animations: {
+            let transformation = CGAffineTransform(scaleX: 1.5, y: 1.5)
+            self.faceButton.transform = transformation
+            
+        }) { (_) in
+            UIView.animate(withDuration: 0.1, animations: {
+                self.faceButton.transform = CGAffineTransform.identity
+            })
+        }
     }
     
 }
