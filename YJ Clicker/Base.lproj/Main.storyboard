@@ -50,7 +50,6 @@
                                 <rect key="frame" x="222" y="549" width="128" height="98"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="jamesbox"/>
-                                <state key="selected" image="jamesboxselected "/>
                                 <connections>
                                     <action selector="jamesSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WDH-zL-Mkr"/>
                                 </connections>
@@ -59,7 +58,6 @@
                                 <rect key="frame" x="39" y="549" width="128" height="98"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="yjbox"/>
-                                <state key="selected" image="yjboxselected"/>
                                 <connections>
                                     <action selector="yjSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aLA-lJ-sAb"/>
                                 </connections>
@@ -255,11 +253,9 @@
     <resources>
         <image name="gethacking" width="1000" height="1000"/>
         <image name="jamesbox" width="600" height="453"/>
-        <image name="jamesboxselected " width="600" height="453"/>
         <image name="second page" width="474" height="766"/>
         <image name="webpage" width="474" height="766"/>
         <image name="yjbox" width="600" height="453"/>
-        <image name="yjboxselected" width="600" height="453"/>
         <image name="yjface" width="500" height="567"/>
     </resources>
 </document>

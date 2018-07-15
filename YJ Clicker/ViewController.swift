@@ -18,14 +18,19 @@ class ViewController: UIViewController {
     var backgroundMusicPlayer = AVAudioPlayer()
     var clickPower = 1
     var counter = 0
+    var imageName = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         playBackgroundMusic(filename: "theme.mp3")
-        yjButton.isSelected = true
         let loadedPower = UserDefaults.standard.integer(forKey: "clickPower")
         clickPower = loadedPower
         let loadedClicks = UserDefaults.standard.integer(forKey: "clicks")
+        let loadedImage = UserDefaults.standard.object(forKey: "imageName")
+        imageName = loadedImage as? String ?? "yjface"
+        if let image = UIImage(named: imageName) {
+            faceButton.setImage(image, for: .normal)
+        }
         counter = loadedClicks
         noOfTapsLabel.text = "Number of taps: \(counter)"
         
@@ -52,23 +57,20 @@ class ViewController: UIViewController {
         }
     }
 
-    @IBAction func jamesSelected(_ sender: Any) {
-        if jamesButton.isSelected == false && yjButton.isSelected == true {
-        jamesButton.isSelected = true
-        yjButton.isSelected = false
-            if let image = UIImage(named: "jamesface") {
+    @IBAction func jamesSelected(_ sender: UIButton) {
+        imageName = "jamesface"
+        UserDefaults.standard.set(imageName, forKey: "imageName")
+            if let image = UIImage(named: imageName) {
         faceButton.setImage(image, for: .normal)
             }
-        }
+        
     }
-    @IBAction func yjSelected(_ sender: Any) {
-        if yjButton.isSelected == false && jamesButton.isSelected == true{
-        yjButton.isSelected = true
-        jamesButton.isSelected = false
-        if let image = UIImage(named: "yjface") {
+    @IBAction func yjSelected(_ sender: UIButton) {
+        imageName = "yjface"
+        UserDefaults.standard.set(imageName, forKey: "imageName")
+        if let image = UIImage(named: imageName) {
                 faceButton.setImage(image, for: .normal)
             }
-        }
     }
     @IBAction func buttonPressed(_ sender: Any) {
         counter = counter + clickPower
