@@ -91,6 +91,9 @@
                                 <state key="normal" title="BUY">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="batPressed:" destination="dnK-b7-Xej" eventType="touchUpInside" id="VML-yy-eqn"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i39-6l-LiC">
                                 <rect key="frame" x="202" y="579" width="92" height="35"/>
@@ -100,6 +103,9 @@
                                 <state key="normal" title="BUY">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="robotPressed:" destination="dnK-b7-Xej" eventType="touchUpInside" id="Yod-gi-6na"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CLICKS: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Nd-OV-Yhq">
                                 <rect key="frame" x="229" y="82" width="137" height="33"/>
@@ -117,6 +123,20 @@
                                 <state key="normal" title="BUY">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="panPressed:" destination="dnK-b7-Xej" eventType="touchUpInside" id="7wH-Vg-mpN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oh3-pp-pqG">
+                                <rect key="frame" x="16" y="81" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.93826958775742364" green="0.9882352941176471" blue="0.96478744543231165" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.77432009232561172" green="0.071605648683190526" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="reset:" destination="dnK-b7-Xej" eventType="touchUpInside" id="NEI-5C-7OX"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tjv-5q-YJ5">
                                 <rect key="frame" x="0.0" y="20" width="107" height="53"/>
@@ -124,7 +144,7 @@
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="Back to Clicker"/>
                                 <connections>
-                                    <action selector="backPressed:" destination="dnK-b7-Xej" eventType="touchUpInside" id="vAI-0r-vO9"/>
+                                    <segue destination="LUv-xV-A0U" kind="unwind" identifier="firstBack" unwindAction="backToClickerScreenWith:" id="yBc-tK-a6E"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -136,6 +156,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ilx-Qb-6vx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="LUv-xV-A0U" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="949.60000000000002" y="33.733133433283363"/>
         </scene>
