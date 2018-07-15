@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
     @IBOutlet var faceButton: UIButton!
@@ -14,22 +15,41 @@ class ViewController: UIViewController {
     @IBOutlet var jamesButton: UIButton!
     @IBOutlet var yjButton: UIButton!
     
+    var backgroundMusicPlayer = AVAudioPlayer()
     var clickPower = 1
     var counter = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        playBackgroundMusic(filename: "theme.mp3")
         yjButton.isSelected = true
         let loadedPower = UserDefaults.standard.integer(forKey: "clickPower")
         clickPower = loadedPower
         let loadedClicks = UserDefaults.standard.integer(forKey: "clicks")
         counter = loadedClicks
         noOfTapsLabel.text = "Number of taps: \(counter)"
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    func playBackgroundMusic(filename: String) {
+        let url = Bundle.main.url(forResource: filename, withExtension: nil)
+        guard let newURL = url else {
+            print("Could not find file: \(filename)")
+            return
+        }
+        do {
+            backgroundMusicPlayer = try AVAudioPlayer(contentsOf: newURL)
+            backgroundMusicPlayer.numberOfLoops = -1
+            backgroundMusicPlayer.prepareToPlay()
+            backgroundMusicPlayer.play()
+        } catch let error as NSError {
+            print(error.description)
+        }
     }
 
     @IBAction func jamesSelected(_ sender: Any) {

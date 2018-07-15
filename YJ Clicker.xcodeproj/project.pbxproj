@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		651CC09A20FB7227004B6C1A /* boo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 651CC09820FB7227004B6C1A /* boo.mp3 */; };
+		651CC09B20FB7227004B6C1A /* applause.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 651CC09920FB7227004B6C1A /* applause.mp3 */; };
+		651CC09D20FB72F3004B6C1A /* theme.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 651CC09C20FB72F3004B6C1A /* theme.mp3 */; };
 		6557796E20FB282E009752AA /* GetHacking2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6557796D20FB282E009752AA /* GetHacking2ViewController.swift */; };
 		65581B0620FA11C1000DC74F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65581B0520FA11C1000DC74F /* AppDelegate.swift */; };
 		65581B0820FA11C1000DC74F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65581B0720FA11C1000DC74F /* ViewController.swift */; };
@@ -18,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		651CC09820FB7227004B6C1A /* boo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = boo.mp3; path = "../../../Music/iTunes/iTunes Media/Music/SoundBible.com/Unknown Album/boo.mp3"; sourceTree = "<group>"; };
+		651CC09920FB7227004B6C1A /* applause.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = applause.mp3; path = ../../../Downloads/applause.mp3; sourceTree = "<group>"; };
+		651CC09C20FB72F3004B6C1A /* theme.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = theme.mp3; path = ../../../Downloads/theme.mp3; sourceTree = "<group>"; };
 		6557796D20FB282E009752AA /* GetHacking2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHacking2ViewController.swift; sourceTree = "<group>"; };
 		65581B0220FA11C1000DC74F /* YJ Clicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "YJ Clicker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65581B0520FA11C1000DC74F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +69,9 @@
 				65581B0520FA11C1000DC74F /* AppDelegate.swift */,
 				65581B0720FA11C1000DC74F /* ViewController.swift */,
 				65581B0920FA11C1000DC74F /* Main.storyboard */,
+				651CC09C20FB72F3004B6C1A /* theme.mp3 */,
+				651CC09820FB7227004B6C1A /* boo.mp3 */,
+				651CC09920FB7227004B6C1A /* applause.mp3 */,
 				6557796D20FB282E009752AA /* GetHacking2ViewController.swift */,
 				65581B1920FA2B29000DC74F /* GROBOLD.ttf */,
 				65581B1720FA22A6000DC74F /* GetHackingViewController.swift */,
@@ -135,6 +144,9 @@
 				65581B1020FA11C4000DC74F /* LaunchScreen.storyboard in Resources */,
 				65581B0D20FA11C4000DC74F /* Assets.xcassets in Resources */,
 				65581B0B20FA11C1000DC74F /* Main.storyboard in Resources */,
+				651CC09A20FB7227004B6C1A /* boo.mp3 in Resources */,
+				651CC09D20FB72F3004B6C1A /* theme.mp3 in Resources */,
+				651CC09B20FB7227004B6C1A /* applause.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
