@@ -1,14 +1,14 @@
 //
-//  GetHackingViewController.swift
+//  GetHacking2ViewController.swift
 //  YJ Clicker
 //
-//  Created by Daniel on 14/7/18.
+//  Created by Daniel on 15/7/18.
 //  Copyright © 2018 Placeholder Interactive. All rights reserved.
 //
 
 import UIKit
 
-class GetHackingViewController: UIViewController {
+class GetHacking2ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +32,10 @@ class GetHackingViewController: UIViewController {
     }
     */
 
-    @IBAction func backPressed(_ sender: Any) {
+    @IBAction func backPressed2(_ sender: Any) {
+        self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+    }
+    @IBAction func page1Pressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
 }

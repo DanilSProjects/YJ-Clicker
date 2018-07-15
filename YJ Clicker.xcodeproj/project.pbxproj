@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6557796E20FB282E009752AA /* GetHacking2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6557796D20FB282E009752AA /* GetHacking2ViewController.swift */; };
 		65581B0620FA11C1000DC74F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65581B0520FA11C1000DC74F /* AppDelegate.swift */; };
 		65581B0820FA11C1000DC74F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65581B0720FA11C1000DC74F /* ViewController.swift */; };
 		65581B0B20FA11C1000DC74F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65581B0920FA11C1000DC74F /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6557796D20FB282E009752AA /* GetHacking2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHacking2ViewController.swift; sourceTree = "<group>"; };
 		65581B0220FA11C1000DC74F /* YJ Clicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "YJ Clicker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65581B0520FA11C1000DC74F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65581B0720FA11C1000DC74F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				65581B0520FA11C1000DC74F /* AppDelegate.swift */,
 				65581B0720FA11C1000DC74F /* ViewController.swift */,
 				65581B0920FA11C1000DC74F /* Main.storyboard */,
+				6557796D20FB282E009752AA /* GetHacking2ViewController.swift */,
 				65581B1920FA2B29000DC74F /* GROBOLD.ttf */,
 				65581B1720FA22A6000DC74F /* GetHackingViewController.swift */,
 				65581B0C20FA11C4000DC74F /* Assets.xcassets */,
@@ -142,6 +145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6557796E20FB282E009752AA /* GetHacking2ViewController.swift in Sources */,
 				65581B0820FA11C1000DC74F /* ViewController.swift in Sources */,
 				65581B1820FA22A6000DC74F /* GetHackingViewController.swift in Sources */,
 				65581B0620FA11C1000DC74F /* AppDelegate.swift in Sources */,
