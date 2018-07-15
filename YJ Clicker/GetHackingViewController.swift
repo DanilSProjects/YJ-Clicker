@@ -9,10 +9,12 @@
 import UIKit
 
 class GetHackingViewController: UIViewController {
-
+    @IBOutlet var clicksLabel: UILabel!
+    var clicks = Int()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        clicksLabel.text = "CLICKS: \(clicks)"
         // Do any additional setup after loading the view.
     }
 
@@ -34,5 +36,12 @@ class GetHackingViewController: UIViewController {
 
     @IBAction func backPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "secondPage" {
+            let destination = segue.destination as! GetHacking2ViewController
+            destination.secondPageClicks = clicks
+        }
     }
 }

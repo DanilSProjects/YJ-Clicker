@@ -9,10 +9,12 @@
 import UIKit
 
 class GetHacking2ViewController: UIViewController {
-
+    var secondPageClicks = Int()
+    @IBOutlet var secClicksLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        secClicksLabel.text = "CLICKS: \(secondPageClicks)"
         // Do any additional setup after loading the view.
     }
 

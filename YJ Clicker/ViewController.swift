@@ -28,8 +28,9 @@ class ViewController: UIViewController {
     @IBAction func buttonPressed(_ sender: Any) {
         counter = counter + clickPower
         noOfTapsLabel.text = "Number of taps: \(counter)"
-        UIView.animate(withDuration: 0.1, animations: {
-            let transformation = CGAffineTransform(scaleX: 1.5, y: 1.5)
+        UIView.animate(withDuration: 0.1, delay: 0, options: [.allowUserInteraction], animations: {
+            
+            let transformation = CGAffineTransform(scaleX: 1.3, y: 1.3)
             self.faceButton.transform = transformation
             
         }) { (_) in
@@ -38,6 +39,11 @@ class ViewController: UIViewController {
             })
         }
     }
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToWebsite" {
+            let destination = segue.destination as! GetHackingViewController
+            destination.clicks = counter
+        }
+    }
 }
 
