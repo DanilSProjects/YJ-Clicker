@@ -46,13 +46,33 @@
                                     <segue destination="dnK-b7-Xej" kind="presentation" identifier="goToWebsite" id="SQd-i5-1uP"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ydy-c8-fHD">
+                                <rect key="frame" x="222" y="549" width="128" height="98"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="jamesbox"/>
+                                <state key="selected" image="jamesboxselected "/>
+                                <connections>
+                                    <action selector="jamesSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WDH-zL-Mkr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cFe-c7-dXK">
+                                <rect key="frame" x="39" y="549" width="128" height="98"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="yjbox"/>
+                                <state key="selected" image="yjboxselected"/>
+                                <connections>
+                                    <action selector="yjSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aLA-lJ-sAb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.58042027387823003" green="0.87214843302169975" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="faceButton" destination="Glf-je-rMI" id="OVl-j3-wsq"/>
+                        <outlet property="jamesButton" destination="Ydy-c8-fHD" id="rv5-AO-Reb"/>
                         <outlet property="noOfTapsLabel" destination="1iJ-3m-aF4" id="6A7-lY-eKG"/>
+                        <outlet property="yjButton" destination="cFe-c7-dXK" id="NW1-G3-fO1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -234,8 +254,12 @@
     </scenes>
     <resources>
         <image name="gethacking" width="1000" height="1000"/>
+        <image name="jamesbox" width="600" height="453"/>
+        <image name="jamesboxselected " width="600" height="453"/>
         <image name="second page" width="474" height="766"/>
         <image name="webpage" width="474" height="766"/>
+        <image name="yjbox" width="600" height="453"/>
+        <image name="yjboxselected" width="600" height="453"/>
         <image name="yjface" width="500" height="567"/>
     </resources>
 </document>

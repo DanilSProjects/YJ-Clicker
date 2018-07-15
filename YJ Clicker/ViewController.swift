@@ -11,11 +11,14 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet var faceButton: UIButton!
     @IBOutlet var noOfTapsLabel: UILabel!
+    @IBOutlet var jamesButton: UIButton!
+    @IBOutlet var yjButton: UIButton!
     
     var clickPower = 1
     var counter = 0
     override func viewDidLoad() {
         super.viewDidLoad()
+        yjButton.isSelected = true
         let loadedPower = UserDefaults.standard.integer(forKey: "clickPower")
         clickPower = loadedPower
         let loadedClicks = UserDefaults.standard.integer(forKey: "clicks")
@@ -29,6 +32,24 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func jamesSelected(_ sender: Any) {
+        if jamesButton.isSelected == false && yjButton.isSelected == true {
+        jamesButton.isSelected = true
+        yjButton.isSelected = false
+            if let image = UIImage(named: "jamesface") {
+        faceButton.setImage(image, for: .normal)
+            }
+        }
+    }
+    @IBAction func yjSelected(_ sender: Any) {
+        if yjButton.isSelected == false && jamesButton.isSelected == true{
+        yjButton.isSelected = true
+        jamesButton.isSelected = false
+        if let image = UIImage(named: "yjface") {
+                faceButton.setImage(image, for: .normal)
+            }
+        }
+    }
     @IBAction func buttonPressed(_ sender: Any) {
         counter = counter + clickPower
         noOfTapsLabel.text = "Number of taps: \(counter)"
