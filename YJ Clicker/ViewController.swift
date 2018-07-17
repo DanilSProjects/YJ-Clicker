@@ -25,6 +25,7 @@ class ViewController: UIViewController {
     var batNo = 0
     var panNo = 0
     var robotNo = 0
+    var isItReset = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -103,6 +104,13 @@ class ViewController: UIViewController {
         if segue.identifier == "goToWebsite" {
             let destination = segue.destination as! GetHackingViewController
             destination.clicks = counter
+            if isItReset == true {
+                destination.clickPowa = clickPower
+                
+                isItReset = false
+            } else if isItReset == false {
+                print ("Nothing out of the ordinary")
+            }
         }
     }
     @IBAction func backToClickerScreen (with segue: UIStoryboardSegue) {
@@ -122,6 +130,25 @@ class ViewController: UIViewController {
             UserDefaults.standard.set(batNo, forKey: "batNo")
             UserDefaults.standard.set(panNo, forKey: "panNo")
             UserDefaults.standard.set(robotNo, forKey: "robotNo")
+        }
+        
+        if segue.identifier == "warUnwind" {
+            batNo = 0
+            panNo = 0
+            robotNo = 0
+            UserDefaults.standard.set(batNo, forKey: "batNo")
+            UserDefaults.standard.set(panNo, forKey: "panNo")
+            UserDefaults.standard.set(robotNo, forKey: "robotNo")
+            batCounter.text = ("\(batNo)")
+            panCounter.text = ("\(panNo)")
+            robotCounter.text = ("\(robotNo)")
+            counter = 0
+            UserDefaults.standard.set(counter, forKey: "clicks")
+            noOfTapsLabel.text = "Number of taps: \(counter)"
+            clickPower = 0
+            UserDefaults.standard.set(clickPower, forKey: "clickPower")
+            isItReset = true
+            
         }
     }
 }
