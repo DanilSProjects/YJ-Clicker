@@ -247,6 +247,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="warPressed:" destination="PJT-jb-T9q" eventType="touchUpInside" id="BSr-9q-mPM"/>
                                     <segue destination="HEy-2s-c2U" kind="presentation" identifier="warScreen" id="bbS-8b-gG1"/>
                                 </connections>
                             </button>
@@ -259,6 +260,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="peacePressed:" destination="PJT-jb-T9q" eventType="touchUpInside" id="1hM-ai-KS9"/>
                                     <segue destination="weK-Sx-X3e" kind="presentation" identifier="peaceScreen" id="zX9-5Z-cGh"/>
                                 </connections>
                             </button>

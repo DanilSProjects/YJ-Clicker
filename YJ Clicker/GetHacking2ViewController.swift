@@ -23,7 +23,23 @@ class GetHacking2ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func warPressed(_ sender: Any) {
+        if secondPageClicks >= 5000 {
+            secondPageClicks  = secondPageClicks - 5000
+            performSegue(withIdentifier: "warScreen", sender: nil)
+        } else if secondPageClicks <= 5000 {
+            print ("ACCESS DENIED")
+        }
+    }
+    @IBAction func peacePressed(_ sender: Any) {
+        if secondPageClicks >= 5001 {
+            secondPageClicks  = secondPageClicks - 5001
+            performSegue(withIdentifier: "peaceScreen", sender: nil)
+        } else if secondPageClicks <= 5001 {
+            print ("ACCESS DENIED")
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
