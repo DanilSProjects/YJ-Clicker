@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/daniel/Desktop/YJ Clicker/YJ Clicker/PeaceViewController.swift">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/daniel/Desktop/YJ Clicker/YJ Clicker/WarViewController.swift">
+   </FileRef>
+   <FileRef
       location = "group:../../../Downloads/bat.png">
    </FileRef>
    <FileRef

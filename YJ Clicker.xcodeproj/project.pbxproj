@@ -21,6 +21,10 @@
 		65F279D220FDF89900D5ABAE /* pan.png in Resources */ = {isa = PBXBuildFile; fileRef = 65F279CF20FDF89800D5ABAE /* pan.png */; };
 		65F279D320FDF89900D5ABAE /* bot.png in Resources */ = {isa = PBXBuildFile; fileRef = 65F279D020FDF89800D5ABAE /* bot.png */; };
 		65F279D620FDF93400D5ABAE /* bat.png in Resources */ = {isa = PBXBuildFile; fileRef = 65F279D520FDF93400D5ABAE /* bat.png */; };
+		65F279D920FE17C000D5ABAE /* peacescreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 65F279D720FE17BF00D5ABAE /* peacescreen.png */; };
+		65F279DA20FE17C000D5ABAE /* warscreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 65F279D820FE17BF00D5ABAE /* warscreen.png */; };
+		65F279DC20FE18D200D5ABAE /* WarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F279DB20FE18D200D5ABAE /* WarViewController.swift */; };
+		65F279DE20FE18E500D5ABAE /* PeaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F279DD20FE18E500D5ABAE /* PeaceViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +44,10 @@
 		65F279CF20FDF89800D5ABAE /* pan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pan.png; path = ../../pan.png; sourceTree = "<group>"; };
 		65F279D020FDF89800D5ABAE /* bot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bot.png; path = ../../bot.png; sourceTree = "<group>"; };
 		65F279D520FDF93400D5ABAE /* bat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bat.png; path = ../../../Downloads/bat.png; sourceTree = "<group>"; };
+		65F279D720FE17BF00D5ABAE /* peacescreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = peacescreen.png; path = ../../peacescreen.png; sourceTree = "<group>"; };
+		65F279D820FE17BF00D5ABAE /* warscreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = warscreen.png; path = ../../warscreen.png; sourceTree = "<group>"; };
+		65F279DB20FE18D200D5ABAE /* WarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WarViewController.swift; path = "/Users/daniel/Desktop/YJ Clicker/YJ Clicker/WarViewController.swift"; sourceTree = "<absolute>"; };
+		65F279DD20FE18E500D5ABAE /* PeaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PeaceViewController.swift; path = "/Users/daniel/Desktop/YJ Clicker/YJ Clicker/PeaceViewController.swift"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,13 +83,17 @@
 				65581B0520FA11C1000DC74F /* AppDelegate.swift */,
 				65581B0720FA11C1000DC74F /* ViewController.swift */,
 				65581B0920FA11C1000DC74F /* Main.storyboard */,
+				65F279D720FE17BF00D5ABAE /* peacescreen.png */,
+				65F279D820FE17BF00D5ABAE /* warscreen.png */,
 				65F279D020FDF89800D5ABAE /* bot.png */,
 				65F279D520FDF93400D5ABAE /* bat.png */,
 				65F279CF20FDF89800D5ABAE /* pan.png */,
 				651CC09C20FB72F3004B6C1A /* theme.mp3 */,
 				651CC09820FB7227004B6C1A /* boo.mp3 */,
 				651CC09920FB7227004B6C1A /* applause.mp3 */,
+				65F279DD20FE18E500D5ABAE /* PeaceViewController.swift */,
 				6557796D20FB282E009752AA /* GetHacking2ViewController.swift */,
+				65F279DB20FE18D200D5ABAE /* WarViewController.swift */,
 				65581B1920FA2B29000DC74F /* GROBOLD.ttf */,
 				65581B1720FA22A6000DC74F /* GetHackingViewController.swift */,
 				65581B0C20FA11C4000DC74F /* Assets.xcassets */,
@@ -156,8 +168,10 @@
 				65581B0D20FA11C4000DC74F /* Assets.xcassets in Resources */,
 				65581B0B20FA11C1000DC74F /* Main.storyboard in Resources */,
 				651CC09A20FB7227004B6C1A /* boo.mp3 in Resources */,
+				65F279D920FE17C000D5ABAE /* peacescreen.png in Resources */,
 				651CC09D20FB72F3004B6C1A /* theme.mp3 in Resources */,
 				651CC09B20FB7227004B6C1A /* applause.mp3 in Resources */,
+				65F279DA20FE17C000D5ABAE /* warscreen.png in Resources */,
 				65F279D620FDF93400D5ABAE /* bat.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -172,6 +186,8 @@
 				6557796E20FB282E009752AA /* GetHacking2ViewController.swift in Sources */,
 				65581B0820FA11C1000DC74F /* ViewController.swift in Sources */,
 				65581B1820FA22A6000DC74F /* GetHackingViewController.swift in Sources */,
+				65F279DE20FE18E500D5ABAE /* PeaceViewController.swift in Sources */,
+				65F279DC20FE18D200D5ABAE /* WarViewController.swift in Sources */,
 				65581B0620FA11C1000DC74F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
