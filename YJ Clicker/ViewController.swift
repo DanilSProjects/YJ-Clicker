@@ -14,11 +14,17 @@ class ViewController: UIViewController {
     @IBOutlet var noOfTapsLabel: UILabel!
     @IBOutlet var jamesButton: UIButton!
     @IBOutlet var yjButton: UIButton!
+    @IBOutlet var batCounter: UILabel!
+    @IBOutlet var panCounter: UILabel!
+    @IBOutlet var robotCounter: UILabel!
     
     var backgroundMusicPlayer = AVAudioPlayer()
     var clickPower = 1
     var counter = 0
     var imageName = String()
+    var batNo = 0
+    var panNo = 0
+    var robotNo = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +34,12 @@ class ViewController: UIViewController {
         let loadedClicks = UserDefaults.standard.integer(forKey: "clicks")
         let loadedImage = UserDefaults.standard.object(forKey: "imageName")
         imageName = loadedImage as? String ?? "yjface"
+        let loadedBat = UserDefaults.standard.integer(forKey: "batNo")
+        let loadedPan = UserDefaults.standard.integer(forKey: "panNo")
+        let loadedBot = UserDefaults.standard.integer(forKey: "robotNo")
+        batCounter.text = ("\(loadedBat)")
+        panCounter.text = ("\(loadedPan)")
+        robotCounter.text = ("\(loadedBot)")
         if let image = UIImage(named: imageName) {
             faceButton.setImage(image, for: .normal)
         }
@@ -99,8 +111,17 @@ class ViewController: UIViewController {
             counter = source.clicks
             clickPower = source.clickPowa
             noOfTapsLabel.text = "Number of taps: \(counter)"
+            batNo = source.batNum
+            panNo = source.panNum
+            robotNo = source.panNum
+            batCounter.text = ("\(batNo)")
+            panCounter.text = ("\(panNo)")
+            robotCounter.text = ("\(robotNo)")
             UserDefaults.standard.set(counter, forKey: "clicks")
             UserDefaults.standard.set(clickPower, forKey: "clickPower")
+            UserDefaults.standard.set(batNo, forKey: "batNo")
+            UserDefaults.standard.set(panNo, forKey: "panNo")
+            UserDefaults.standard.set(robotNo, forKey: "robotNo")
         }
     }
 }
