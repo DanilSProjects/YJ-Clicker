@@ -15,6 +15,7 @@ class GetHackingViewController: UIViewController {
     var batNum = 0
     var panNum = 0
     var robotNum = 0
+    var isResetTouched = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,7 @@ class GetHackingViewController: UIViewController {
         batNum = loadedBat
         panNum = loadedPan
         robotNum = loadedRobot
+        
         clickPowa = loadedPowa
         
         clicksLabel.text = "CLICKS: \(clicks)"
@@ -34,6 +36,15 @@ class GetHackingViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if isResetTouched == true {
+        clickPowa = 1
+        UserDefaults.standard.set(clickPowa, forKey: "clickPowa")
+        isResetTouched = false
+        }
+        
     }
     
     @IBAction func reset(_ sender: Any) {
@@ -96,4 +107,5 @@ class GetHackingViewController: UIViewController {
             
         }
     }
+    
 }

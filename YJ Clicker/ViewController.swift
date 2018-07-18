@@ -54,6 +54,11 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    @IBAction func plus5000(_ sender: Any) {
+        counter += 5000
+        noOfTapsLabel.text = "Number of taps: \(counter)"
+        UserDefaults.standard.set(counter, forKey: "clicks")
+    }
     func playBackgroundMusic(filename: String) {
         let url = Bundle.main.url(forResource: filename, withExtension: nil)
         guard let newURL = url else {
@@ -104,13 +109,7 @@ class ViewController: UIViewController {
         if segue.identifier == "goToWebsite" {
             let destination = segue.destination as! GetHackingViewController
             destination.clicks = counter
-            if isItReset == true {
-                destination.clickPowa = clickPower
-                
-                isItReset = false
-            } else if isItReset == false {
-                print ("Nothing out of the ordinary")
-            }
+            destination.isResetTouched = isItReset
         }
     }
     @IBAction func backToClickerScreen (with segue: UIStoryboardSegue) {
@@ -130,6 +129,7 @@ class ViewController: UIViewController {
             UserDefaults.standard.set(batNo, forKey: "batNo")
             UserDefaults.standard.set(panNo, forKey: "panNo")
             UserDefaults.standard.set(robotNo, forKey: "robotNo")
+            isItReset = false
         }
         
         if segue.identifier == "warUnwind" {
@@ -145,7 +145,7 @@ class ViewController: UIViewController {
             counter = 0
             UserDefaults.standard.set(counter, forKey: "clicks")
             noOfTapsLabel.text = "Number of taps: \(counter)"
-            clickPower = 0
+            clickPower = 1
             UserDefaults.standard.set(clickPower, forKey: "clickPower")
             isItReset = true
             
