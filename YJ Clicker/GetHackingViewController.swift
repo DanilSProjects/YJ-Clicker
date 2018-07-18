@@ -43,6 +43,12 @@ class GetHackingViewController: UIViewController {
         clickPowa = 1
         UserDefaults.standard.set(clickPowa, forKey: "clickPowa")
         isResetTouched = false
+        batNum = 0
+        UserDefaults.standard.set(batNum, forKey: "batNum")
+        panNum = 0
+        UserDefaults.standard.set(panNum, forKey: "panNum")
+        robotNum = 0
+        UserDefaults.standard.set(robotNum, forKey: "robotNum")
         }
         
     }
