@@ -9,6 +9,7 @@
 import UIKit
 import AVFoundation
 
+var backgroundMusicPlayer = AVAudioPlayer()
 class ViewController: UIViewController {
     @IBOutlet var faceButton: UIButton!
     @IBOutlet var noOfTapsLabel: UILabel!
@@ -18,7 +19,7 @@ class ViewController: UIViewController {
     @IBOutlet var panCounter: UILabel!
     @IBOutlet var robotCounter: UILabel!
     
-    var backgroundMusicPlayer = AVAudioPlayer()
+    
     var clickPower = 1
     var counter = 0
     var imageName = String()
@@ -120,7 +121,7 @@ class ViewController: UIViewController {
             noOfTapsLabel.text = "Number of taps: \(counter)"
             batNo = source.batNum
             panNo = source.panNum
-            robotNo = source.panNum
+            robotNo = source.robotNum
             batCounter.text = ("\(batNo)")
             panCounter.text = ("\(panNo)")
             robotCounter.text = ("\(robotNo)")
@@ -133,6 +134,27 @@ class ViewController: UIViewController {
         }
         
         if segue.identifier == "warUnwind" {
+            playBackgroundMusic(filename: "theme.mp3")
+            batNo = 0
+            panNo = 0
+            robotNo = 0
+            UserDefaults.standard.set(batNo, forKey: "batNo")
+            UserDefaults.standard.set(panNo, forKey: "panNo")
+            UserDefaults.standard.set(robotNo, forKey: "robotNo")
+            batCounter.text = ("\(batNo)")
+            panCounter.text = ("\(panNo)")
+            robotCounter.text = ("\(robotNo)")
+            counter = 0
+            UserDefaults.standard.set(counter, forKey: "clicks")
+            noOfTapsLabel.text = "Number of taps: \(counter)"
+            clickPower = 1
+            UserDefaults.standard.set(clickPower, forKey: "clickPower")
+            isItReset = true
+            
+        }
+        
+        if segue.identifier == "peaceUnwind" {
+            playBackgroundMusic(filename: "theme.mp3")
             batNo = 0
             panNo = 0
             robotNo = 0
