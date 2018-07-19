@@ -53,10 +53,7 @@ class GetHackingViewController: UIViewController {
         
     }
     
-    @IBAction func reset(_ sender: Any) {
-        clickPowa = 1
-        UserDefaults.standard.set(clickPowa, forKey: "clickPowa")
-    }
+
     
     @IBAction func batPressed(_ sender: Any) {
         if clicks >= 50 {
