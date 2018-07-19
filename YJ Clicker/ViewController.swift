@@ -57,6 +57,36 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func resetClicked (alert: UIAlertAction) {
+        batNo = 0
+        panNo = 0
+        robotNo = 0
+        UserDefaults.standard.set(batNo, forKey: "batNo")
+        UserDefaults.standard.set(panNo, forKey: "panNo")
+        UserDefaults.standard.set(robotNo, forKey: "robotNo")
+        batCounter.text = ("\(batNo)")
+        panCounter.text = ("\(panNo)")
+        robotCounter.text = ("\(robotNo)")
+        counter = 0
+        UserDefaults.standard.set(counter, forKey: "clicks")
+        noOfTapsLabel.text = "Number of taps: \(counter)"
+        clickPower = 1
+        UserDefaults.standard.set(clickPower, forKey: "clickPower")
+        isItReset = true
+        UserDefaults.standard.set(isItReset, forKey: "isItReset")
+    }
+    
+    @IBAction func restartButton(_ sender: Any) {
+        let alert = UIAlertController(title: "Are you sure you want to reset?", message: "Resetting will wipe all of your current data.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Proceed", comment: "Default action"), style: .default, handler: resetClicked
+        ))
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: "Default action"), style: .default, handler: { _ in
+            NSLog("The \"Reset\" alert occured.")
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     @IBAction func plus5000(_ sender: Any) {
         counter += 5000
         noOfTapsLabel.text = "Number of taps: \(counter)"

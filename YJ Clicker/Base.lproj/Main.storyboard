@@ -95,10 +95,17 @@
                                     <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nih-bn-lXH"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nLi-mZ-pcy">
-                                <rect key="frame" x="16" y="385" width="76" height="101"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zYh-e0-buW">
+                                <rect key="frame" x="12" y="440" width="109" height="93"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" image="restart"/>
+                                <connections>
+                                    <action selector="restartButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dsa-pe-VP3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nLi-mZ-pcy">
+                                <rect key="frame" x="308" y="476" width="62" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="plus5000:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fB3-cx-L7A"/>
                                 </connections>
@@ -377,6 +384,7 @@
         <image name="jamesbox" width="600" height="453"/>
         <image name="pan.png" width="600" height="400"/>
         <image name="peacescreen.png" width="335" height="667"/>
+        <image name="restart" width="300" height="168"/>
         <image name="second page" width="474" height="766"/>
         <image name="warscreen.png" width="335" height="667"/>
         <image name="webpage" width="474" height="766"/>
