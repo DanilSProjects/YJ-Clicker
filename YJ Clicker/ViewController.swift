@@ -45,6 +45,8 @@ class ViewController: UIViewController {
         if let image = UIImage(named: imageName) {
             faceButton.setImage(image, for: .normal)
         }
+        let loadedResetValue = UserDefaults.standard.bool(forKey: "isItReset")
+        isItReset = loadedResetValue
         counter = loadedClicks
         noOfTapsLabel.text = "Number of taps: \(counter)"
         
@@ -111,6 +113,7 @@ class ViewController: UIViewController {
             let destination = segue.destination as! GetHackingViewController
             destination.clicks = counter
             destination.isResetTouched = isItReset
+            
         }
     }
     @IBAction func backToClickerScreen (with segue: UIStoryboardSegue) {
@@ -131,6 +134,7 @@ class ViewController: UIViewController {
             UserDefaults.standard.set(panNo, forKey: "panNo")
             UserDefaults.standard.set(robotNo, forKey: "robotNo")
             isItReset = false
+            UserDefaults.standard.set(isItReset, forKey: "isItReset")
         }
         
         if segue.identifier == "warUnwind" {
@@ -150,7 +154,7 @@ class ViewController: UIViewController {
             clickPower = 1
             UserDefaults.standard.set(clickPower, forKey: "clickPower")
             isItReset = true
-            
+            UserDefaults.standard.set(isItReset, forKey: "isItReset")
         }
         
         if segue.identifier == "peaceUnwind" {
@@ -170,7 +174,7 @@ class ViewController: UIViewController {
             clickPower = 1
             UserDefaults.standard.set(clickPower, forKey: "clickPower")
             isItReset = true
-            
+            UserDefaults.standard.set(isItReset, forKey: "isItReset")
         }
     }
 }
